@@ -1,0 +1,54 @@
+syntax = "proto2";
+
+package humanoid.can_driver;
+
+message TopicConfig {
+  // input
+  required string control_command_topic = 1;
+
+  // output 
+  required string motor_state_topic = 2;
+}
+
+message PluginDeclareInfo {
+  // id
+  required uint32 id = 1;
+
+  // the name of the device plugin
+  required string name = 2;
+
+  // the class type of the device plugin
+  required string type = 3;
+}
+
+message DeviceInfo {
+  // info for read can frame
+  required PluginDeclareInfo device_read_info = 1;
+
+  // info for write can frame
+  required PluginDeclareInfo device_write_info = 2;
+
+  // joint position min value limit (degree)
+  required int32 position_min = 3;
+
+  //joint position max value limit (degree)
+  required int32 position_max = 4;
+
+  // TODO: whether add velocity、torque range limit
+}
+
+message Can {
+  // can device number
+  required string can_device_id = 1;
+
+  // maybe to many motor
+  repeated DeviceInfo device_info = 2;
+}
+
+message CanDriverConfig {
+  required TopicConfig topic_config = 1; 
+  required int32 rate = 2;
+
+  // maybe multiple cans
+  repeated Can can = 3;
+}

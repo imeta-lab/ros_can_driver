@@ -1,0 +1,171 @@
+topic_config {
+  control_command_topic: "/humanoid/control/control_command"
+  motor_state_topic: "/humanoid/can_driver/motor_states"
+}
+
+rate: 1000
+
+can {
+  can_device_id: "can00_09"
+
+  device_info {
+    device_read_info {
+      id: 0x10
+      name: "can0_motor1"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x00
+      name: "can0_motor1"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+  device_info {
+    device_read_info {
+      id: 0x19
+      name: "can0_motor2"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x09
+      name: "can0_motor2"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+}
+
+can {
+  can_device_id: "can01_08"
+
+  device_info {
+    device_read_info {
+      id: 0x11
+      name: "can1_motor1"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x01
+      name: "can1_motor1"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+  device_info {
+    device_read_info {
+      id: 0x18
+      name: "can1_motor2"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x08
+      name: "can1_motor2"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+}
+
+can {
+  can_device_id: "can02_07"
+
+  device_info {
+    device_read_info {
+      id: 0x12
+      name: "can2_motor1"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x02
+      name: "can2_motor1"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+  device_info {
+    device_read_info {
+      id: 0x17
+      name: "can2_motor2"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x07
+      name: "can2_motor2"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+}
+
+can {
+  can_device_id: "can03_06"
+
+  device_info {
+    device_read_info {
+      id: 0x13
+      name: "can3_motor1"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x03
+      name: "can3_motor1"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+  device_info {
+    device_read_info {
+      id: 0x16
+      name: "can3_motor2"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x06
+      name: "can3_motor2"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+}
+
+can {
+  can_device_id: "can4"
+
+  device_info {
+    device_read_info {
+      id: 0x14
+      name: "can4_motor1"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x04
+      name: "can4_motor1"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+  device_info {
+    device_read_info {
+      id: 0x15
+      name: "can4_motor2"
+      type: "DmMotorReader"
+    }
+    device_write_info {
+      id: 0x05
+      name: "can4_motor2"
+      type: "DmMotorWriter"
+    }
+    position_min: -30 
+    position_max: 30
+  }
+}

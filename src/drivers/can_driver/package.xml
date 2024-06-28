@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>can_driver</name>
+  <version>0.0.0</version>
+  <description>The can driver based socketcan</description>
+
+  <maintainer email="601081321@qq.com">xiaofan zhang</maintainer>
+  <license>Business</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>ros_msgs</build_depend>
+
+  <build_depend>roscpp</build_depend>
+  <exec_depend>ros_msgs</exec_depend>
+  
+</package>
